@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/logo/logo-2.png" rel="icon">
+
+    <title>FAKE STORE</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="dist/all.min.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="dist/normalize.css">
+    <!-- TailwindCss  -->
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- Fake Store Project -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <button id="scrollToTopBtn"  onclick="scrollToTop()">
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
+    <!-- Start Show Alert Success-->
+    <div id="myAlert-success" class="fixed bottom-10 right-10 bg-green-100 border border-green-500 pr-16 pl-5 py-3 rounded z-50 alert" role="alert">
+        <span id="text-alert-success" class="block capitalize sm:inline">Something seriously bad happened.</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <svg id="closeBtn-success" class="fill-current h-6 w-6 text-green-800" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>Close</title>
+                <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/>
+            </svg>
+        </span>
+    </div>
+    <!-- End Show Alert Success -->
+
+    <!-- Start Show Alert Danger-->
+    <div id="myAlert-danger" class="fixed bottom-10 right-10 bg-red-100 border border-red-500 pr-16 pl-5 py-3 rounded z-50 alert" role="alert">
+        <span id="text-alert-danger" class="block capitalize sm:inline">Something seriously bad happened.</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <svg id="closeBtn-danger" class="fill-current h-6 w-6 text-red-900" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <title>Close</title>
+                <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/>
+            </svg>
+        </span>
+    </div>
+    <!-- End Show Alert Danger -->
+
+    <!-- Start Box Form -->
+    <!-- Start Login -->
+    <div class="Box-login-Form parent-of-form">
+        <form class="login-form">
+            <div style="position: relative;" class="form-container">
+                <h2 style="text-align:center;" class="text-2xl">Login</h2>
+                <div class="close-login close"> &#10006; </div>
+
+                <div class="box">
+                    <label for="login-username"><b>Username</b></label>
+                    <input class="login-username" id="login-username" type="text" value="mor_2314"   required autocomplete="username">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <p class="login-user-message"> at least 3 character </p>
+                </div>
+
+                <div class="box">
+                    <label for="login-password"><b>Password</b></label>
+                    <input class="login-password" id="login-password" value="83r5^_" type="password"  required autocomplete="current-password">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <P class="login-password-message">
+                        Password must be at least 8 characters with 1 upper case letter
+                        and 1 number.
+                    </P>
+                </div>
+
+                <button disabled type="button" class="login-action-button" >Login</button>
+            </div>
+        </form>
+    </div>
+    <!-- End Login -->
+
+    <!-- Start Register -->
+    <div class="Box-register-Form parent-of-form">
+        <form class="register-form">
+            <div style="position: relative;" class="form-container">
+                <h2 style="text-align:center;" class="text-2xl">Register</h2>
+                <div class="close-register close"> &#10006; </div>
+
+                <div class="box">
+                    <label for="register-username"><b>Username</b></label>
+                    <input class="register-username" id="register-username" type="text" placeholder="Enter Username" required autocomplete="username">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <p class="register-user-message"> at least 3 character </p>
+                </div>
+
+                <div class="box">
+                    <label for="email"><b>Email</b></label>
+                    <input class="email" id="email" type="email" placeholder="Enter Email"  required autocomplete="email">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <P class="email-message">Please enter a correct email address</P>
+                </div>
+
+                <div class="box">
+                    <label for="register-password"><b>Password</b></label>
+                    <input class="register-password" id="register-password" type="password" placeholder="Enter Password" required autocomplete="new-password">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <P class="register-password-message">Password must be at least 8 characters with 1 upper case letter
+                        and 1 number.</P>
+                </div>
+
+                <div class="box">
+                    <label for="password-repeat"><b>Repeat Password</b></label>
+                    <input class="password-repeat" id="password-repeat" type="password" placeholder="Repeat Password"  required required autocomplete="new-password">
+                    <i class="icon-check-circle fa-solid fa-circle-check"></i>
+                    <P class="repeat-message">Please make sure your passwords match</P>
+                </div>
+
+                <button disabled type="button" class="register-action-button">Register</button>
+            </div>
+        </form>
+    </div>
+    <!-- End Register -->
+    <!-- End Box Form -->
+
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a class="logo" href="index.html">
+                    <img src="assets/logo/logo-1.png" alt="aws-logo" />
+                </a>
+
+                <ul class="links" id="links">
+                    <li>
+                        <a class="active" href="index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="#product">product</a>
+                    </li>
+                    <li>
+                        <a href="#footer">contact-us</a>
+                    </li>
+                </ul>
+
+                <ul class="icons flex justify-between align-items-center gap-3">
+                    <div class="nav-bar" id="bar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+
+                    <div class="cursor-pointer flex gap-3 justify-around align-items-center" id="login-process">
+                        <li id="login-account" class="capitalize text-white">
+                            login
+                        </li>
+                        <li id="register-account" class="capitalize text-white">
+                            register
+                        </li>
+                    </div>
+
+                    <div class="flex" id="logout-process">
+                        <li class="capitalize text-white cursor-pointer" onclick="logout()">logout</li>
+                    </div>
+                    
+                    <li>
+                        <a href="shopCart.html">
+                            <i href id="cart_shopping" class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-length border  text-white rounded-full"
+                            style="padding-right: 5px; padding-left:5px;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="text">
+            <h1>Fake Store API</h1>
+            <p class="landing-p">
+                Nulla quis lorem ut libero malesuada feugiat.
+                Curabitur non nulla sit amet nisl tempus convallis
+                quis ac lectus. Quisque velit nisi, pretium ut lacinia
+                in, elementum id enim.
+            </p>
+            <button>GET STARTED</button>
+            <ul class="bullets">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Landing -->
+
+    <!-- Featured Start -->
+    <div class="container">
+        <div class="test grid  gap-2.5 w-4/5  mt-4 m-auto"
+            style="grid-template-columns: repeat(auto-fill,minmax(200px,1fr));">
+            <div class="flex gap-3 p-8 bg-white">
+                <i class="fa-solid fa-check-double text-icon text-3xl"></i>
+                <h1 class="text-lg font-semibold">Quality Product</h1>
+            </div>
+            <div class="flex gap-3 p-8 bg-white">
+                <i class="fa-solid fa-truck-fast  text-icon text-3xl"></i>
+                <h1 class="text-lg font-semibold">Free Shipping</h1>
+            </div>
+            <div class="flex gap-3 p-8 bg-white">
+                <i class="fa-solid fa-arrow-right-arrow-left  text-icon text-3xl"></i>
+                <h1 class="text-lg font-semibold">14- Day Return</h1>
+            </div>
+            <div class="flex gap-3 p-8 bg-white">
+                <i class="fa-solid fa-phone-volume  text-icon text-3xl"></i>
+                <h1 class="text-lg font-semibold">24/7 support</h1>
+            </div>
+
+        </div>
+    </div>
+    <!-- Featured End -->
+
+    <!-- Start Shope By Categories -->
+    <div class="border border-y-1 mt-5 ">
+        <div class=" container text-center my-4 ">
+            <h1 class="font-bold text-3xl uppercase " style="color:#E3AC10;">shop by categories</h1>
+            <p class="mt-1 text-sm">Lorem ipsum dolor sit amet</p>
+            <span class="font-bold text-xl">________</span>
+        </div>
+    </div>
+    <!-- End Shope By Categories -->
+
+    <!-- Start Categories -->
+    <div class=" mt-4 mb-4">
+        <div class="container">
+            <div class="categories">
+                <ul id="categories"
+                    class=" categories relative cursor-pointer  flex flex-col sl:flex-row gap-5 justify-center items-center">
+                    <!--if want to add load more btn and remove it ==> onclick="removeBtn()"-->
+                    <li class="capitalize text-xl category text-icon">all</li>
+                    <li class="capitalize text-xl category">electronics</li>
+                    <li class="capitalize text-xl category">jewelery</li>
+                    <li class="capitalize text-xl category">men's clothing</li>
+                    <li class="capitalize text-xl category">women's clothing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
+
+    <!-- Start Products -->
+    <div id="product" class="products mt-5 mb-5">
+        <div class="container">
+            <div class="grid gap-3" id="products" style="grid-template-columns: repeat(auto-fill,minmax(250px,1fr));">
+                <!-- <div class="product hidden p-2.5  bg-white border-2 border-gray-300">
+                <div class="relative truncate cursor-pointer">
+                    <div class="image w-72 h-72">
+                        <img class="w-full h-full" src="/assets/carousel-1.jpg" alt="">
+                    </div>
+                    <div class="to-cart cursor-pointer absolute  bg-zinc-400 m-auto h-10  w-7/12  flex flex-row justify-center align-items-center">
+                        <i class="fa-solid fa-cart-plus text-xl  border-black border-r-2  pr-2 "></i>
+                        <h3 class="capitalize font-medium pl-2">add to cart</h3>
+                    </div>
+                </div>
+
+                <div class="h-320 pt-3 pl-2 border bg-white">
+                    <h3 class="mb-1 capitalize text-base text-zinc-500">title of product</h3>
+                    <span class="font-semibold">$445</span>
+                </div>
+            </div> -->
+            </div>
+            <!-- <button class="load-more block my-8 mx-auto text-sm font-bold border-2 border-black rounded-2xl py-2.5 px-10 uppercase " id="load-more">load more</button> -->
+        </div>
+    </div>
+    <!-- End Products -->
+
+    <!-- Start Footer -->
+    <footer id="footer" class="py-4">
+        <div class="container foot flex flex-col justify-content-center items-center">
+            <div class="w-32 ">
+                <img src="assets/logo/logo-1.png" alt="">
+            </div>
+            <p class="text-white capitalize tracking-wider text-lg pt-2">
+                all rights reserved to 
+                <span class="text-icon">ahmed samir</span>
+            </p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/home.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/formValidation.js"></script>
+    <script src="js/shoppingCart.js"></script>
+
+</body>
+
+</html>

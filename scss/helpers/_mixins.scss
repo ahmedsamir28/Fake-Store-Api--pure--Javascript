@@ -1,0 +1,33 @@
+@mixin d-flex ($gab: 0,
+    $align-items: center,
+    $flex-direction: row,
+    $justify-content:space-between ) {
+    display: flex;
+    justify-content:  $justify-content;  
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    gap: $gab;
+    
+}
+
+@mixin padding-RL($top: 0, $left: 0, $bottom: 0, $right: 0) {
+    padding: $top $left $bottom $right;
+}
+
+@mixin max-768 {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+// Import _base.scss File which Store _container.scss & _reset.scss Files 
+@use "./scss/base/base";
+
+// Import _pages.scss File which Store All pages Files like _homepage.scss & _about.scss
+@use "./scss/pages/pages";
+
+@use "./scss/layout/layout";
